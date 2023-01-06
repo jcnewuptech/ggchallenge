@@ -13,9 +13,9 @@ metrics:
     time_grains: [day, month, week, quarter, year]
 
     dimensions:
-      - status
-      - partner
-      - company
+      - referral_status
+      - referral_partner
+      - referral_company
       - referral_lead_sales_contact
       - referral_country
 
