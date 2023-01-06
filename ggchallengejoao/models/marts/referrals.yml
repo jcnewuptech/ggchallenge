@@ -1,0 +1,38 @@
+version: 2
+
+metrics:
+  - name: referral_total_count
+    label: Referral Total Count
+    model: ref('mart_referrals')
+    description: 'Total count of referrals'
+
+    calculation_method: count_distinct
+    expression: id
+
+    timestamp: referral_record_date
+    time_grains: [day, month, week, quarter, year]
+
+    dimensions:
+      - status
+      - partner
+      - company
+      - referral_lead_sales_contact
+      - referral_country
+
+  - name: referral_avg_days_from_creation
+    label: Referral Avg Days from Creation
+    model: ref('mart_referrals')
+    description: 'Average days since creation until last status update'
+
+    calculation_method: average
+    expression: referral_days_from_creation
+
+    timestamp: referral_record_date
+    time_grains: [month, week, quarter, year]
+
+    dimensions:
+      - status
+      - partner
+      - company
+      - referral_lead_sales_contact
+      - referral_country

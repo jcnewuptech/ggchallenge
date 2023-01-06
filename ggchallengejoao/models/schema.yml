@@ -1,6 +1,9 @@
 
 version: 2
 
+
+
+
 models:
   - name: stg_referrals
     description: "Stage table of referrals seed, created to convert timestamp columns"
@@ -32,6 +35,47 @@ models:
       - name: referral_updated_at_timestamp
         description: "Shows when the status went from `pending` to either `disinterested` or `successful converted to timestamp type"
 
+  - name: stg_partners
+    description: "Stage table of partners seed, created to convert timestamp columns"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: partner_type
+        description: "The type of the partner"
+      - name: lead_sales_contact
+        description: "Sales manager of partner account"
+      - name: partner_created_at_timestamp
+        description: ""
+      - name: partner_updated_at_timestamp
+        description: ""
+
+  - name: mart_referrals
+    description: ""
+    columns:
+      - name: referral_company
+        description: "Id of the referred companies"
+      - name: referral_partner
+        description: "Id of the partner that referred the company"
+      - name: referral_status
+        description: "Status of the referral"
+      - name: referral_outbound
+        description: "is_outboungitd is true when we refer a customer to a partner"
+      - name: referral_record_date
+        description: "Creation date of referral"
+      - name: referral_updated
+        description: "Shows when the status went from `pending` to either `disinterested` or `successful"
+      - name: referral_days_from_creation
+        description: "The date diff from the creation date to the last status"
+      - name: referral_partner_type
+        description: "The type of the partner that referred the company"
+      - name: referral_lead_sales_contact
+        description: "Name of the sales person that manages the partner"
+      - name: referral_country
+        description: "Country of the sales person"
+
 seeds:
   - name: referrals
     description: "Stage table of referrals seed, created to convert timestamp columns"
@@ -52,3 +96,23 @@ seeds:
         description: "Status of the referral"
       - name: is_outbound
         description: "is_outbound is true when we refer a customer to a partner"
+  - name: partners
+    description: "Stage table of referrals seed, created to convert timestamp columns"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+      - name: created_at
+        description: "Partner creation date"
+      - name: updated_at
+        description: "Partner update date"
+      - name: partner_type
+        description: "The type of the partner"
+      - name: lead_sales_contact
+        description: "Sales manager of partner account"
+  - name: sales_people
+    description: "Stage table of referrals seed, created to convert timestamp columns"
+    columns:
+      - name: name
+        description: "Name of the sales person"
+      - name: country
+        description: "Country of the sales person"
