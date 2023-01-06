@@ -1,9 +1,6 @@
 
 version: 2
 
-
-
-
 models:
   - name: stg_referrals
     description: "Stage table of referrals seed, created to convert timestamp columns"
