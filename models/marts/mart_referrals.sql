@@ -1,6 +1,7 @@
 {{ config(materialized='table') }}
 
 select
+    r.id as referral_id,
     r.company_id as referral_company,
     r.partner_id as referral_partner,
     r.status as referral_status,

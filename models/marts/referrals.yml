@@ -7,7 +7,7 @@ metrics:
     description: 'Total count of referrals'
 
     calculation_method: count_distinct
-    expression: id
+    expression: referral_id
 
     timestamp: referral_record_date
     time_grains: [day, month, week, quarter, year]
@@ -31,8 +31,8 @@ metrics:
     time_grains: [month, week, quarter, year]
 
     dimensions:
-      - status
-      - partner
-      - company
+      - referral_status
+      - referral_partner
+      - referral_company
       - referral_lead_sales_contact
       - referral_country

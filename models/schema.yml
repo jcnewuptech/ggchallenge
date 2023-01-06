@@ -52,6 +52,8 @@ models:
   - name: mart_referrals
     description: ""
     columns:
+      - name: referral_id
+        description: "id of the referral"
       - name: referral_company
         description: "Id of the referred companies"
       - name: referral_partner
