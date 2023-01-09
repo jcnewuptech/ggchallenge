@@ -10570,3 +10570,449 @@ with calendar as (
 [0m20:22:23.502800 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
 [0m20:22:23.503012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f5ebf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f5eba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f709700>]}
 [0m20:22:23.503145 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-01-09 20:59:39.193301 | ec644822-01ae-4989-87a1-be8f9bfa31a6 ==============================
+[0m20:59:39.193347 [info ] [MainThread]: Running with dbt=1.3.2
+[0m20:59:39.194956 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/joaopaulomedeiroscecilio/dev/ggchallenge', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'select': ['sql_outbound_per_country'], 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m20:59:39.195287 [debug] [MainThread]: Tracking: tracking
+[0m20:59:39.219780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f35ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f35c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f35be0>]}
+[0m20:59:39.343800 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:59:39.344799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ec644822-01ae-4989-87a1-be8f9bfa31a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f23580>]}
+[0m20:59:39.483776 [debug] [MainThread]: Parsing macros/unix_to_timestamp.sql
+[0m20:59:39.485157 [debug] [MainThread]: Parsing macros/etc.sql
+[0m20:59:39.489250 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m20:59:39.502849 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m20:59:39.549508 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m20:59:39.554669 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m20:59:39.560979 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m20:59:39.577518 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m20:59:39.584264 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m20:59:39.623973 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m20:59:39.627739 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m20:59:39.628910 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m20:59:39.630380 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m20:59:39.632370 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m20:59:39.633069 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m20:59:39.634133 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m20:59:39.635271 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m20:59:39.637862 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m20:59:39.641457 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m20:59:39.643210 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m20:59:39.644779 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m20:59:39.646301 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m20:59:39.648038 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m20:59:39.649167 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m20:59:39.653236 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m20:59:39.654921 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m20:59:39.658583 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m20:59:39.660511 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m20:59:39.666044 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m20:59:39.674427 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m20:59:39.681166 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m20:59:39.685188 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m20:59:39.718745 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m20:59:39.748513 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m20:59:39.772040 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m20:59:39.782222 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m20:59:39.786617 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m20:59:39.790585 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m20:59:39.808934 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m20:59:39.842031 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m20:59:39.845816 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m20:59:39.858069 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m20:59:39.881139 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m20:59:39.916586 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m20:59:39.927942 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m20:59:39.935074 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m20:59:39.947048 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m20:59:39.949954 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m20:59:39.957358 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m20:59:39.962585 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m20:59:39.977621 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m20:59:40.016419 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m20:59:40.020434 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m20:59:40.026292 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m20:59:40.029979 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m20:59:40.031494 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m20:59:40.032760 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m20:59:40.033754 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m20:59:40.035777 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m20:59:40.047104 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m20:59:40.066147 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m20:59:40.068050 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m20:59:40.070941 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m20:59:40.072997 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m20:59:40.075425 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m20:59:40.078132 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m20:59:40.080293 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m20:59:40.082990 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m20:59:40.085935 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m20:59:40.090834 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m20:59:40.093469 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m20:59:40.095582 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m20:59:40.097653 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m20:59:40.099998 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m20:59:40.101873 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m20:59:40.104311 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m20:59:40.106747 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m20:59:40.121384 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m20:59:40.123902 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m20:59:40.125807 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m20:59:40.128963 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m20:59:40.133514 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m20:59:40.135428 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m20:59:40.138372 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m20:59:40.140763 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m20:59:40.145722 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m20:59:40.153058 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m20:59:40.158746 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m20:59:40.191596 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m20:59:40.196346 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m20:59:40.225613 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m20:59:40.234723 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m20:59:40.250102 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m20:59:40.272713 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m20:59:40.287788 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m20:59:40.294166 [debug] [MainThread]: Parsing macros/develop.sql
+[0m20:59:40.317946 [debug] [MainThread]: Parsing macros/calculate.sql
+[0m20:59:40.330003 [debug] [MainThread]: Parsing macros/get_metric_sql.sql
+[0m20:59:40.341198 [debug] [MainThread]: Parsing macros/misc/metrics__date_spine.sql
+[0m20:59:40.359662 [debug] [MainThread]: Parsing macros/misc/metrics__equality.sql
+[0m20:59:40.375996 [debug] [MainThread]: Parsing macros/graph_parsing/get_metric_relation.sql
+[0m20:59:40.378494 [debug] [MainThread]: Parsing macros/graph_parsing/get_model_relation.sql
+[0m20:59:40.384202 [debug] [MainThread]: Parsing macros/secondary_calculations/secondary_calculation_rolling.sql
+[0m20:59:40.389310 [debug] [MainThread]: Parsing macros/secondary_calculations/secondary_calculation_period_to_date.sql
+[0m20:59:40.392523 [debug] [MainThread]: Parsing macros/secondary_calculations/secondary_calculation_period_over_period.sql
+[0m20:59:40.404341 [debug] [MainThread]: Parsing macros/secondary_calculations/secondary_calculation_prior.sql
+[0m20:59:40.407489 [debug] [MainThread]: Parsing macros/secondary_calculations/generate_secondary_calculation_alias.sql
+[0m20:59:40.426264 [debug] [MainThread]: Parsing macros/secondary_calculations/perform_secondary_calculation.sql
+[0m20:59:40.435287 [debug] [MainThread]: Parsing macros/variables/get_faux_metric_tree.sql
+[0m20:59:40.446054 [debug] [MainThread]: Parsing macros/variables/get_metrics_dictionary.sql
+[0m20:59:40.452384 [debug] [MainThread]: Parsing macros/variables/get_calendar_dimensions.sql
+[0m20:59:40.455687 [debug] [MainThread]: Parsing macros/variables/get_non_calendar_dimension_list.sql
+[0m20:59:40.458561 [debug] [MainThread]: Parsing macros/variables/update_metric_tree.sql
+[0m20:59:40.470369 [debug] [MainThread]: Parsing macros/variables/get_metric_tree.sql
+[0m20:59:40.485429 [debug] [MainThread]: Parsing macros/variables/update_faux_metric_tree.sql
+[0m20:59:40.498569 [debug] [MainThread]: Parsing macros/variables/get_metric_model_name.sql
+[0m20:59:40.500736 [debug] [MainThread]: Parsing macros/variables/get_grain_order.sql
+[0m20:59:40.503309 [debug] [MainThread]: Parsing macros/variables/get_relevent_periods.sql
+[0m20:59:40.506332 [debug] [MainThread]: Parsing macros/variables/get_develop_unique_metric_id_list.sql
+[0m20:59:40.510090 [debug] [MainThread]: Parsing macros/variables/get_metric_list.sql
+[0m20:59:40.514984 [debug] [MainThread]: Parsing macros/variables/get_metric_definition.sql
+[0m20:59:40.526733 [debug] [MainThread]: Parsing macros/variables/get_metric_unique_id_list.sql
+[0m20:59:40.531488 [debug] [MainThread]: Parsing macros/variables/get_metric_allowlist.sql
+[0m20:59:40.537257 [debug] [MainThread]: Parsing macros/variables/get_base_metrics.sql
+[0m20:59:40.543665 [debug] [MainThread]: Parsing macros/sql_gen/gen_final_cte.sql
+[0m20:59:40.558756 [debug] [MainThread]: Parsing macros/sql_gen/build_metric_sql.sql
+[0m20:59:40.566225 [debug] [MainThread]: Parsing macros/sql_gen/gen_dimensions_cte.sql
+[0m20:59:40.570555 [debug] [MainThread]: Parsing macros/sql_gen/gen_filters.sql
+[0m20:59:40.578043 [debug] [MainThread]: Parsing macros/sql_gen/gen_order_by.sql
+[0m20:59:40.583442 [debug] [MainThread]: Parsing macros/sql_gen/gen_spine_time_cte.sql
+[0m20:59:40.591413 [debug] [MainThread]: Parsing macros/sql_gen/gen_secondary_calculations_cte.sql
+[0m20:59:40.601711 [debug] [MainThread]: Parsing macros/sql_gen/gen_calendar_cte.sql
+[0m20:59:40.606676 [debug] [MainThread]: Parsing macros/sql_gen/gen_metric_cte.sql
+[0m20:59:40.628591 [debug] [MainThread]: Parsing macros/sql_gen/gen_group_by.sql
+[0m20:59:40.636270 [debug] [MainThread]: Parsing macros/sql_gen/gen_base_query.sql
+[0m20:59:40.645717 [debug] [MainThread]: Parsing macros/sql_gen/gen_calendar_table_join.sql
+[0m20:59:40.662501 [debug] [MainThread]: Parsing macros/sql_gen/gen_aggregate_cte.sql
+[0m20:59:40.674203 [debug] [MainThread]: Parsing macros/sql_gen/gen_primary_metric_aggregate.sql
+[0m20:59:40.690039 [debug] [MainThread]: Parsing macros/sql_gen/gen_joined_metrics_cte.sql
+[0m20:59:40.741857 [debug] [MainThread]: Parsing macros/secondary_calculations_configuration/period_over_period.sql
+[0m20:59:40.748538 [debug] [MainThread]: Parsing macros/secondary_calculations_configuration/prior.sql
+[0m20:59:40.753588 [debug] [MainThread]: Parsing macros/secondary_calculations_configuration/period_to_date.sql
+[0m20:59:40.760304 [debug] [MainThread]: Parsing macros/secondary_calculations_configuration/rolling.sql
+[0m20:59:40.765353 [debug] [MainThread]: Parsing macros/validation/is_valid_dimension.sql
+[0m20:59:40.767699 [debug] [MainThread]: Parsing macros/validation/validate_aggregate_coherence.sql
+[0m20:59:40.770144 [debug] [MainThread]: Parsing macros/validation/validate_develop_grain.sql
+[0m20:59:40.774486 [debug] [MainThread]: Parsing macros/validation/validate_derived_metrics.sql
+[0m20:59:40.778998 [debug] [MainThread]: Parsing macros/validation/validate_grain_order.sql
+[0m20:59:40.784389 [debug] [MainThread]: Parsing macros/validation/validate_dimension_list.sql
+[0m20:59:40.790355 [debug] [MainThread]: Parsing macros/validation/validate_metric_config.sql
+[0m20:59:40.796488 [debug] [MainThread]: Parsing macros/validation/validate_grain.sql
+[0m20:59:40.803419 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m20:59:40.806849 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+[0m20:59:40.812795 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m20:59:40.816597 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+[0m20:59:40.824824 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+[0m20:59:40.833215 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+[0m20:59:40.837915 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+[0m20:59:40.845459 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+[0m20:59:40.849892 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+[0m20:59:40.855390 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+[0m20:59:40.860370 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+[0m20:59:40.865001 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+[0m20:59:40.870780 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+[0m20:59:40.875373 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+[0m20:59:40.879330 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+[0m20:59:40.887879 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+[0m20:59:40.896571 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+[0m20:59:40.904492 [debug] [MainThread]: Parsing macros/generic_tests/not_empty_string.sql
+[0m20:59:40.909238 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+[0m20:59:40.927882 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m20:59:40.930569 [debug] [MainThread]: Parsing macros/jinja_helpers/_is_relation.sql
+[0m20:59:40.932989 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m20:59:40.935601 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m20:59:40.938355 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m20:59:40.941321 [debug] [MainThread]: Parsing macros/jinja_helpers/_is_ephemeral.sql
+[0m20:59:40.944923 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m20:59:40.953494 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m20:59:40.957366 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m20:59:40.965394 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m20:59:40.974330 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m20:59:40.982095 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m20:59:40.986157 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m20:59:40.999047 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m20:59:41.012925 [debug] [MainThread]: Parsing macros/sql/safe_divide.sql
+[0m20:59:41.015073 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m20:59:41.040004 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m20:59:41.042490 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+[0m20:59:41.049405 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m20:59:41.052615 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m20:59:41.058026 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m20:59:41.061556 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m20:59:41.073712 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m20:59:41.086624 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m20:59:41.094561 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+[0m20:59:41.100624 [debug] [MainThread]: Parsing macros/sql/width_bucket.sql
+[0m20:59:41.112182 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m20:59:41.116585 [debug] [MainThread]: Parsing macros/sql/generate_surrogate_key.sql
+[0m20:59:41.121361 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+[0m20:59:41.124484 [debug] [MainThread]: Parsing macros/sql/get_single_value.sql
+[0m20:59:41.130211 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m20:59:42.387787 [debug] [MainThread]: 1603: static parser failed on staging/stg_referrals.sql
+[0m20:59:42.417665 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_referrals.sql
+[0m20:59:42.421354 [debug] [MainThread]: 1603: static parser failed on staging/stg_partners.sql
+[0m20:59:42.430590 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_partners.sql
+[0m20:59:42.434210 [debug] [MainThread]: 1699: static parser successfully parsed marts/mart_referrals.sql
+[0m20:59:42.439959 [debug] [MainThread]: 1603: static parser failed on examples/metrics_total_referrals.sql
+[0m20:59:42.527893 [debug] [MainThread]: 1602: parser fallback to jinja rendering on examples/metrics_total_referrals.sql
+[0m20:59:42.530313 [debug] [MainThread]: 1699: static parser successfully parsed examples/sql_outbound_per_country.sql
+[0m20:59:42.616834 [debug] [MainThread]: 1603: static parser failed on dbt_metrics_default_calendar.sql
+[0m20:59:42.679955 [debug] [MainThread]: 1602: parser fallback to jinja rendering on dbt_metrics_default_calendar.sql
+[0m20:59:42.923302 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ggchallengejoao.example
+
+[0m20:59:42.934615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec644822-01ae-4989-87a1-be8f9bfa31a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074ac0d0>]}
+[0m20:59:42.963462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec644822-01ae-4989-87a1-be8f9bfa31a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f50160>]}
+[0m20:59:42.964299 [info ] [MainThread]: Found 6 models, 6 tests, 0 snapshots, 0 analyses, 533 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 2 metrics
+[0m20:59:42.964932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec644822-01ae-4989-87a1-be8f9bfa31a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fc0370>]}
+[0m20:59:42.967322 [info ] [MainThread]: 
+[0m20:59:42.969096 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m20:59:42.972964 [debug] [ThreadPool]: Acquiring new bigquery connection "list_dynamic-point-367801_getgroundjoao"
+[0m20:59:42.973415 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:59:47.019684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec644822-01ae-4989-87a1-be8f9bfa31a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10272e760>]}
+[0m20:59:47.021413 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:59:47.022145 [info ] [MainThread]: 
+[0m20:59:47.030282 [debug] [Thread-1  ]: Began running node model.ggchallengejoao.sql_outbound_per_country
+[0m20:59:47.031641 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_outbound_per_country"
+[0m20:59:47.032008 [debug] [Thread-1  ]: Began compiling node model.ggchallengejoao.sql_outbound_per_country
+[0m20:59:47.032359 [debug] [Thread-1  ]: Compiling model.ggchallengejoao.sql_outbound_per_country
+[0m20:59:47.040390 [debug] [Thread-1  ]: Writing injected SQL for node "model.ggchallengejoao.sql_outbound_per_country"
+[0m20:59:47.041640 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:59:47.041939 [debug] [Thread-1  ]: Began executing node model.ggchallengejoao.sql_outbound_per_country
+[0m20:59:47.042179 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:59:47.043518 [debug] [Thread-1  ]: Finished running node model.ggchallengejoao.sql_outbound_per_country
+[0m20:59:47.045077 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:59:47.045354 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_outbound_per_country' was properly closed.
+[0m20:59:47.067320 [info ] [MainThread]: Done.
+[0m20:59:47.068161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10774fe80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10774ff70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10774ff40>]}
+[0m20:59:47.068592 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-01-09 21:06:38.636195 | 17286bdc-d5d2-443b-9218-ac0f0ae7497f ==============================
+[0m21:06:38.636242 [info ] [MainThread]: Running with dbt=1.3.2
+[0m21:06:38.637930 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/joaopaulomedeiroscecilio/dev/ggchallenge', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m21:06:38.638235 [debug] [MainThread]: Tracking: tracking
+[0m21:06:38.662214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106338550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063386d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106338670>]}
+[0m21:06:38.929800 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m21:06:38.930545 [debug] [MainThread]: Partial parsing: added file: ggchallengejoao://models/examples/sql_avg_days_status_change.sql
+[0m21:06:38.931190 [debug] [MainThread]: Partial parsing: updated file: ggchallengejoao://models/examples/metrics_total_referrals.sql
+[0m21:06:38.931590 [debug] [MainThread]: Partial parsing: updated file: ggchallengejoao://models/examples/sql_outbound_per_country.sql
+[0m21:06:38.963874 [debug] [MainThread]: 1603: static parser failed on examples/sql_avg_days_status_change.sql
+[0m21:06:39.093679 [debug] [MainThread]: 1602: parser fallback to jinja rendering on examples/sql_avg_days_status_change.sql
+[0m21:06:39.096304 [debug] [MainThread]: 1603: static parser failed on examples/metrics_total_referrals.sql
+[0m21:06:39.107866 [debug] [MainThread]: 1602: parser fallback to jinja rendering on examples/metrics_total_referrals.sql
+[0m21:06:39.114109 [debug] [MainThread]: 1699: static parser successfully parsed examples/sql_outbound_per_country.sql
+[0m21:06:39.158161 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ggchallengejoao.example
+
+[0m21:06:39.171980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '17286bdc-d5d2-443b-9218-ac0f0ae7497f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10677a0d0>]}
+[0m21:06:39.202418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '17286bdc-d5d2-443b-9218-ac0f0ae7497f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10665fdf0>]}
+[0m21:06:39.203222 [info ] [MainThread]: Found 7 models, 6 tests, 0 snapshots, 0 analyses, 533 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 2 metrics
+[0m21:06:39.203927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17286bdc-d5d2-443b-9218-ac0f0ae7497f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10665fd60>]}
+[0m21:06:39.208692 [info ] [MainThread]: 
+[0m21:06:39.210401 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m21:06:39.213905 [debug] [ThreadPool]: Acquiring new bigquery connection "list_dynamic-point-367801_getgroundjoao"
+[0m21:06:39.214594 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:06:42.108846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17286bdc-d5d2-443b-9218-ac0f0ae7497f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065d30d0>]}
+[0m21:06:42.110762 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:06:42.111480 [info ] [MainThread]: 
+[0m21:06:42.121387 [debug] [Thread-1  ]: Began running node model.metrics.dbt_metrics_default_calendar
+[0m21:06:42.121744 [debug] [Thread-2  ]: Began running node seed.ggchallengejoao.partners
+[0m21:06:42.122060 [debug] [Thread-3  ]: Began running node seed.ggchallengejoao.referrals
+[0m21:06:42.122308 [debug] [Thread-4  ]: Began running node seed.ggchallengejoao.sales_people
+[0m21:06:42.123233 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.metrics.dbt_metrics_default_calendar"
+[0m21:06:42.124245 [debug] [Thread-2  ]: Acquiring new bigquery connection "seed.ggchallengejoao.partners"
+[0m21:06:42.125224 [debug] [Thread-3  ]: Acquiring new bigquery connection "seed.ggchallengejoao.referrals"
+[0m21:06:42.126425 [debug] [Thread-4  ]: Acquiring new bigquery connection "seed.ggchallengejoao.sales_people"
+[0m21:06:42.127117 [debug] [Thread-1  ]: Began compiling node model.metrics.dbt_metrics_default_calendar
+[0m21:06:42.127450 [debug] [Thread-2  ]: Began compiling node seed.ggchallengejoao.partners
+[0m21:06:42.127725 [debug] [Thread-3  ]: Began compiling node seed.ggchallengejoao.referrals
+[0m21:06:42.127987 [debug] [Thread-4  ]: Began compiling node seed.ggchallengejoao.sales_people
+[0m21:06:42.128484 [debug] [Thread-1  ]: Compiling model.metrics.dbt_metrics_default_calendar
+[0m21:06:42.128719 [debug] [Thread-2  ]: Compiling seed.ggchallengejoao.partners
+[0m21:06:42.128892 [debug] [Thread-3  ]: Compiling seed.ggchallengejoao.referrals
+[0m21:06:42.129066 [debug] [Thread-4  ]: Compiling seed.ggchallengejoao.sales_people
+[0m21:06:42.160052 [debug] [Thread-2  ]: Writing injected SQL for node "seed.ggchallengejoao.partners"
+[0m21:06:42.176184 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:06:42.183034 [debug] [Thread-4  ]: Writing injected SQL for node "seed.ggchallengejoao.sales_people"
+[0m21:06:42.183450 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.183920 [debug] [Thread-1  ]: On model.metrics.dbt_metrics_default_calendar: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.metrics.dbt_metrics_default_calendar"} */
+
+
+        select 
+
+    datetime_diff(
+        cast(cast('2030-01-01' as date) as datetime),
+        cast(cast('1990-01-01' as date) as datetime),
+        day
+    )
+
+  
+[0m21:06:42.184217 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.184488 [debug] [Thread-2  ]: Began executing node seed.ggchallengejoao.partners
+[0m21:06:42.187202 [debug] [Thread-3  ]: Writing injected SQL for node "seed.ggchallengejoao.referrals"
+[0m21:06:42.189788 [debug] [Thread-4  ]: Began executing node seed.ggchallengejoao.sales_people
+[0m21:06:42.191243 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.191626 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.191859 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.193198 [debug] [Thread-2  ]: Finished running node seed.ggchallengejoao.partners
+[0m21:06:42.194476 [debug] [Thread-3  ]: Began executing node seed.ggchallengejoao.referrals
+[0m21:06:42.195578 [debug] [Thread-4  ]: Finished running node seed.ggchallengejoao.sales_people
+[0m21:06:42.196257 [debug] [Thread-2  ]: Began running node model.ggchallengejoao.stg_partners
+[0m21:06:42.196498 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.197413 [debug] [Thread-2  ]: Acquiring new bigquery connection "model.ggchallengejoao.stg_partners"
+[0m21:06:42.198189 [debug] [Thread-3  ]: Finished running node seed.ggchallengejoao.referrals
+[0m21:06:42.198427 [debug] [Thread-2  ]: Began compiling node model.ggchallengejoao.stg_partners
+[0m21:06:42.199040 [debug] [Thread-2  ]: Compiling model.ggchallengejoao.stg_partners
+[0m21:06:42.199273 [debug] [Thread-4  ]: Began running node model.ggchallengejoao.stg_referrals
+[0m21:06:42.207106 [debug] [Thread-2  ]: Writing injected SQL for node "model.ggchallengejoao.stg_partners"
+[0m21:06:42.208131 [debug] [Thread-4  ]: Acquiring new bigquery connection "model.ggchallengejoao.stg_referrals"
+[0m21:06:42.208670 [debug] [Thread-4  ]: Began compiling node model.ggchallengejoao.stg_referrals
+[0m21:06:42.208966 [debug] [Thread-4  ]: Compiling model.ggchallengejoao.stg_referrals
+[0m21:06:42.215695 [debug] [Thread-4  ]: Writing injected SQL for node "model.ggchallengejoao.stg_referrals"
+[0m21:06:42.216197 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.216486 [debug] [Thread-2  ]: Began executing node model.ggchallengejoao.stg_partners
+[0m21:06:42.216763 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.218050 [debug] [Thread-2  ]: Finished running node model.ggchallengejoao.stg_partners
+[0m21:06:42.218268 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.218952 [debug] [Thread-3  ]: Began running node test.ggchallengejoao.not_null_stg_partners_id.625c7b2674
+[0m21:06:42.219179 [debug] [Thread-2  ]: Began running node test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041
+[0m21:06:42.219401 [debug] [Thread-4  ]: Began executing node model.ggchallengejoao.stg_referrals
+[0m21:06:42.220056 [debug] [Thread-3  ]: Acquiring new bigquery connection "test.ggchallengejoao.not_null_stg_partners_id.625c7b2674"
+[0m21:06:42.220665 [debug] [Thread-2  ]: Acquiring new bigquery connection "test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041"
+[0m21:06:42.220918 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.221161 [debug] [Thread-3  ]: Began compiling node test.ggchallengejoao.not_null_stg_partners_id.625c7b2674
+[0m21:06:42.221414 [debug] [Thread-2  ]: Began compiling node test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041
+[0m21:06:42.222194 [debug] [Thread-4  ]: Finished running node model.ggchallengejoao.stg_referrals
+[0m21:06:42.222455 [debug] [Thread-3  ]: Compiling test.ggchallengejoao.not_null_stg_partners_id.625c7b2674
+[0m21:06:42.222647 [debug] [Thread-2  ]: Compiling test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041
+[0m21:06:42.223316 [debug] [Thread-4  ]: Began running node model.ggchallengejoao.mart_referrals
+[0m21:06:42.245625 [debug] [Thread-3  ]: Writing injected SQL for node "test.ggchallengejoao.not_null_stg_partners_id.625c7b2674"
+[0m21:06:42.258117 [debug] [Thread-2  ]: Writing injected SQL for node "test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041"
+[0m21:06:42.259038 [debug] [Thread-4  ]: Acquiring new bigquery connection "model.ggchallengejoao.mart_referrals"
+[0m21:06:42.259608 [debug] [Thread-4  ]: Began compiling node model.ggchallengejoao.mart_referrals
+[0m21:06:42.259887 [debug] [Thread-4  ]: Compiling model.ggchallengejoao.mart_referrals
+[0m21:06:42.269142 [debug] [Thread-4  ]: Writing injected SQL for node "model.ggchallengejoao.mart_referrals"
+[0m21:06:42.270136 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.270354 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.270698 [debug] [Thread-2  ]: Began executing node test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041
+[0m21:06:42.270894 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.271120 [debug] [Thread-3  ]: Began executing node test.ggchallengejoao.not_null_stg_partners_id.625c7b2674
+[0m21:06:42.271325 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.271598 [debug] [Thread-4  ]: Began executing node model.ggchallengejoao.mart_referrals
+[0m21:06:42.271865 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.272833 [debug] [Thread-2  ]: Finished running node test.ggchallengejoao.unique_stg_partners_id.8b2ef7f041
+[0m21:06:42.273164 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.274128 [debug] [Thread-3  ]: Finished running node test.ggchallengejoao.not_null_stg_partners_id.625c7b2674
+[0m21:06:42.274506 [debug] [Thread-2  ]: Began running node test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f
+[0m21:06:42.275609 [debug] [Thread-4  ]: Finished running node model.ggchallengejoao.mart_referrals
+[0m21:06:42.275879 [debug] [Thread-3  ]: Began running node test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53
+[0m21:06:42.276557 [debug] [Thread-2  ]: Acquiring new bigquery connection "test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f"
+[0m21:06:42.276821 [debug] [Thread-4  ]: Began running node test.ggchallengejoao.not_null_stg_referrals_id.f511791502
+[0m21:06:42.277718 [debug] [Thread-3  ]: Acquiring new bigquery connection "test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53"
+[0m21:06:42.277995 [debug] [Thread-2  ]: Began compiling node test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f
+[0m21:06:42.278730 [debug] [Thread-4  ]: Acquiring new bigquery connection "test.ggchallengejoao.not_null_stg_referrals_id.f511791502"
+[0m21:06:42.279106 [debug] [Thread-3  ]: Began compiling node test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53
+[0m21:06:42.279510 [debug] [Thread-2  ]: Compiling test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f
+[0m21:06:42.279729 [debug] [Thread-4  ]: Began compiling node test.ggchallengejoao.not_null_stg_referrals_id.f511791502
+[0m21:06:42.279953 [debug] [Thread-3  ]: Compiling test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53
+[0m21:06:42.374997 [debug] [Thread-4  ]: Compiling test.ggchallengejoao.not_null_stg_referrals_id.f511791502
+[0m21:06:42.381893 [debug] [Thread-2  ]: Writing injected SQL for node "test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f"
+[0m21:06:42.392455 [debug] [Thread-3  ]: Writing injected SQL for node "test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53"
+[0m21:06:42.400055 [debug] [Thread-4  ]: Writing injected SQL for node "test.ggchallengejoao.not_null_stg_referrals_id.f511791502"
+[0m21:06:42.401729 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.401943 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.402331 [debug] [Thread-3  ]: Began executing node test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53
+[0m21:06:42.402494 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.402695 [debug] [Thread-2  ]: Began executing node test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f
+[0m21:06:42.402945 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.403158 [debug] [Thread-4  ]: Began executing node test.ggchallengejoao.not_null_stg_referrals_id.f511791502
+[0m21:06:42.403401 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.404255 [debug] [Thread-3  ]: Finished running node test.ggchallengejoao.accepted_values_stg_referrals_status__disinterested__pending__successful.613dd29c53
+[0m21:06:42.404545 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:42.405329 [debug] [Thread-2  ]: Finished running node test.ggchallengejoao.accepted_values_stg_referrals_is_outbound__False__0__1.050111bc6f
+[0m21:06:42.405705 [debug] [Thread-3  ]: Began running node test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f
+[0m21:06:42.406933 [debug] [Thread-4  ]: Finished running node test.ggchallengejoao.not_null_stg_referrals_id.f511791502
+[0m21:06:42.407387 [debug] [Thread-2  ]: Began running node model.ggchallengejoao.sql_outbound_per_country
+[0m21:06:42.408267 [debug] [Thread-3  ]: Acquiring new bigquery connection "test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f"
+[0m21:06:42.409195 [debug] [Thread-2  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_outbound_per_country"
+[0m21:06:42.409430 [debug] [Thread-3  ]: Began compiling node test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f
+[0m21:06:42.409640 [debug] [Thread-2  ]: Began compiling node model.ggchallengejoao.sql_outbound_per_country
+[0m21:06:42.409843 [debug] [Thread-3  ]: Compiling test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f
+[0m21:06:42.410044 [debug] [Thread-2  ]: Compiling model.ggchallengejoao.sql_outbound_per_country
+[0m21:06:42.417926 [debug] [Thread-3  ]: Writing injected SQL for node "test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f"
+[0m21:06:42.423529 [debug] [Thread-2  ]: Writing injected SQL for node "model.ggchallengejoao.sql_outbound_per_country"
+[0m21:06:42.424398 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.424964 [debug] [Thread-3  ]: Began executing node test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f
+[0m21:06:42.425176 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.425427 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:42.425667 [debug] [Thread-2  ]: Began executing node model.ggchallengejoao.sql_outbound_per_country
+[0m21:06:42.426516 [debug] [Thread-3  ]: Finished running node test.ggchallengejoao.unique_stg_referrals_id.3a83fe0e6f
+[0m21:06:42.426746 [debug] [Thread-2  ]: finished collecting timing info
+[0m21:06:42.427667 [debug] [Thread-2  ]: Finished running node model.ggchallengejoao.sql_outbound_per_country
+[0m21:06:44.226431 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:441e6383-d3bb-4ae7-a4c8-8db9eece92a1:EU&page=queryresults
+[0m21:06:44.251854 [debug] [Thread-1  ]: Writing injected SQL for node "model.metrics.dbt_metrics_default_calendar"
+[0m21:06:44.253500 [debug] [Thread-1  ]: finished collecting timing info
+[0m21:06:44.253796 [debug] [Thread-1  ]: Began executing node model.metrics.dbt_metrics_default_calendar
+[0m21:06:44.254080 [debug] [Thread-1  ]: finished collecting timing info
+[0m21:06:44.255100 [debug] [Thread-1  ]: Finished running node model.metrics.dbt_metrics_default_calendar
+[0m21:06:44.255910 [debug] [Thread-4  ]: Began running node model.ggchallengejoao.metrics_total_referrals
+[0m21:06:44.256240 [debug] [Thread-3  ]: Began running node model.ggchallengejoao.sql_avg_days_status_change
+[0m21:06:44.257418 [debug] [Thread-4  ]: Acquiring new bigquery connection "model.ggchallengejoao.metrics_total_referrals"
+[0m21:06:44.258194 [debug] [Thread-3  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_avg_days_status_change"
+[0m21:06:44.258411 [debug] [Thread-4  ]: Began compiling node model.ggchallengejoao.metrics_total_referrals
+[0m21:06:44.258621 [debug] [Thread-3  ]: Began compiling node model.ggchallengejoao.sql_avg_days_status_change
+[0m21:06:44.258843 [debug] [Thread-4  ]: Compiling model.ggchallengejoao.metrics_total_referrals
+[0m21:06:44.259064 [debug] [Thread-3  ]: Compiling model.ggchallengejoao.sql_avg_days_status_change
+[0m21:06:44.761303 [debug] [Thread-3  ]: Writing injected SQL for node "model.ggchallengejoao.sql_avg_days_status_change"
+[0m21:06:44.761574 [debug] [Thread-4  ]: Writing injected SQL for node "model.ggchallengejoao.metrics_total_referrals"
+[0m21:06:44.762628 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:44.763031 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:44.763372 [debug] [Thread-3  ]: Began executing node model.ggchallengejoao.sql_avg_days_status_change
+[0m21:06:44.763989 [debug] [Thread-3  ]: finished collecting timing info
+[0m21:06:44.763698 [debug] [Thread-4  ]: Began executing node model.ggchallengejoao.metrics_total_referrals
+[0m21:06:44.765201 [debug] [Thread-3  ]: Finished running node model.ggchallengejoao.sql_avg_days_status_change
+[0m21:06:44.765694 [debug] [Thread-4  ]: finished collecting timing info
+[0m21:06:44.766988 [debug] [Thread-4  ]: Finished running node model.ggchallengejoao.metrics_total_referrals
+[0m21:06:44.768640 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:06:44.769158 [debug] [MainThread]: Connection 'model.metrics.dbt_metrics_default_calendar' was properly closed.
+[0m21:06:44.769471 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_outbound_per_country' was properly closed.
+[0m21:06:44.769708 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_avg_days_status_change' was properly closed.
+[0m21:06:44.769934 [debug] [MainThread]: Connection 'model.ggchallengejoao.metrics_total_referrals' was properly closed.
+[0m21:06:44.793225 [info ] [MainThread]: Done.
+[0m21:06:44.794317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10688b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10677a4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068776d0>]}
+[0m21:06:44.794804 [debug] [MainThread]: Flushing usage events
