@@ -20,5 +20,5 @@ select
     end as referral_lead_sales_contact,
     coalesce(d.country, 'No country') as referral_country
 from {{ ref('stg_referrals') }} r
-left join {{ ref('partners') }} p on r.partner_id = p.id
+left join {{ ref('stg_partners') }} p on r.partner_id = p.id
 left join {{ ref('sales_people') }} d on p.lead_sales_contact = d.name

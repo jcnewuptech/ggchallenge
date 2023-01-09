@@ -1,5 +1,6 @@
 {{ config(materialized='view') }}
 
+
 with
     calendar as (
         select *
@@ -14,15 +15,14 @@ with
             datetime_trunc(
                 referral_updated, month
             ) as mart_referrals_referral_updated_month,
-            count(distinct referral_id) as mart_referrals_referral_total_count
+            avg(referral_days_from_creation) as avg_days_to_success
         from {{ ref('mart_referrals') }}
-
         where ( ( (referral_status) in ('successful')))
         group by 1
     )
 
 
-select c.record_date, r.*
+select c.record_date, r.avg_days_to_success
 from calendar c
 left join
     referrals r on cast(c.record_date as datetime) = cast(
