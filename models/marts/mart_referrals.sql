@@ -8,11 +8,16 @@ select
     r.is_outbound as referral_outbound,
     r.referral_created_at_timestamp as referral_record_date,
     r.referral_updated_at_timestamp as referral_updated,
-    timestamp_diff(
-        referral_updated_at_timestamp, referral_created_at_timestamp, day
+    nullif(
+        timestamp_diff(
+            referral_updated_at_timestamp, referral_created_at_timestamp, day
+        ),
+        0
     ) as referral_days_from_creation,
     p.partner_type as referral_partner_type,
-    p.lead_sales_contact as referral_lead_sales_contact,
+    case
+        when p.lead_sales_contact = '0' then 'No contact' else p.lead_sales_contact
+    end as referral_lead_sales_contact,
     coalesce(d.country, 'No country') as referral_country
 from {{ ref('stg_referrals') }} r
 left join {{ ref('partners') }} p on r.partner_id = p.id
