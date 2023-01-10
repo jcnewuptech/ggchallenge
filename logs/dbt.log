@@ -11952,3 +11952,722 @@ There are 1 unused configuration paths:
 [0m21:52:14.116672 [info ] [MainThread]: Press Ctrl+C to exit.
 [0m21:55:13.662033 [debug] [MainThread]: Flushing usage events
 [0m21:55:14.498390 [info ] [MainThread]: ctrl-c
+
+
+============================== 2023-01-10 20:01:56.707876 | 8a609656-82da-4e73-82d4-770d40b4b77b ==============================
+[0m20:01:56.707897 [info ] [MainThread]: Running with dbt=1.3.2
+[0m20:01:56.708732 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/joaopaulomedeiroscecilio/dev/ggchallenge', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'select': ['metrics_total_referrals'], 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m20:01:56.708864 [debug] [MainThread]: Tracking: tracking
+[0m20:01:56.719685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11edfecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11edfee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11edfee20>]}
+[0m20:01:56.800701 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 3 files changed.
+[0m20:01:56.800964 [debug] [MainThread]: Partial parsing: added file: ggchallengejoao://models/examples/sql_total_referrals.sql
+[0m20:01:56.801343 [debug] [MainThread]: Partial parsing: update schema file: ggchallengejoao://models/schema.yml
+[0m20:01:56.801454 [debug] [MainThread]: Partial parsing: updated file: ggchallengejoao://models/examples/metrics_total_referrals.sql
+[0m20:01:56.801593 [debug] [MainThread]: Partial parsing: updated file: ggchallengejoao://models/marts/mart_referrals.sql
+[0m20:01:56.811308 [debug] [MainThread]: 1699: static parser successfully parsed examples/sql_total_referrals.sql
+[0m20:01:56.817769 [debug] [MainThread]: 1603: static parser failed on examples/metrics_total_referrals.sql
+[0m20:01:56.843824 [debug] [MainThread]: 1602: parser fallback to jinja rendering on examples/metrics_total_referrals.sql
+[0m20:01:56.844915 [debug] [MainThread]: 1699: static parser successfully parsed marts/mart_referrals.sql
+[0m20:01:56.864603 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ggchallengejoao.example
+
+[0m20:01:56.868248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a609656-82da-4e73-82d4-770d40b4b77b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f26b0d0>]}
+[0m20:01:56.879222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a609656-82da-4e73-82d4-770d40b4b77b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f0b0c10>]}
+[0m20:01:56.879848 [info ] [MainThread]: Found 8 models, 6 tests, 0 snapshots, 0 analyses, 533 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 2 metrics
+[0m20:01:56.880068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a609656-82da-4e73-82d4-770d40b4b77b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f0b0bb0>]}
+[0m20:01:56.881194 [info ] [MainThread]: 
+[0m20:01:56.882294 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m20:01:56.884342 [debug] [ThreadPool]: Acquiring new bigquery connection "list_dynamic-point-367801_getgroundjoao"
+[0m20:01:56.884611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:01:59.551029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a609656-82da-4e73-82d4-770d40b4b77b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f061ac0>]}
+[0m20:01:59.553026 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:01:59.553574 [info ] [MainThread]: 
+[0m20:01:59.562697 [debug] [Thread-1  ]: Began running node model.ggchallengejoao.metrics_total_referrals
+[0m20:01:59.563758 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.ggchallengejoao.metrics_total_referrals"
+[0m20:01:59.564088 [debug] [Thread-1  ]: Began compiling node model.ggchallengejoao.metrics_total_referrals
+[0m20:01:59.564493 [debug] [Thread-1  ]: Compiling model.ggchallengejoao.metrics_total_referrals
+[0m20:01:59.672852 [debug] [Thread-1  ]: Writing injected SQL for node "model.ggchallengejoao.metrics_total_referrals"
+[0m20:01:59.673831 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:01:59.673956 [debug] [Thread-1  ]: Began executing node model.ggchallengejoao.metrics_total_referrals
+[0m20:01:59.674066 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:01:59.674418 [debug] [Thread-1  ]: Finished running node model.ggchallengejoao.metrics_total_referrals
+[0m20:01:59.674937 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:01:59.675031 [debug] [MainThread]: Connection 'model.ggchallengejoao.metrics_total_referrals' was properly closed.
+[0m20:01:59.682706 [info ] [MainThread]: Done.
+[0m20:01:59.682948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f3d7910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f3d7670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f3d7730>]}
+[0m20:01:59.683078 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-01-10 20:11:01.723237 | 8dd3ee53-180c-424a-869b-440ba4526497 ==============================
+[0m20:11:01.723259 [info ] [MainThread]: Running with dbt=1.3.2
+[0m20:11:01.723877 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/joaopaulomedeiroscecilio/dev/ggchallenge', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m20:11:01.724024 [debug] [MainThread]: Tracking: tracking
+[0m20:11:01.732482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fbfec70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fbfed60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fbfee20>]}
+[0m20:11:01.805961 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:11:01.806468 [debug] [MainThread]: Partial parsing: update schema file: ggchallengejoao://models/schema.yml
+[0m20:11:01.815474 [debug] [MainThread]: 1699: static parser successfully parsed examples/sql_total_referrals.sql
+[0m20:11:01.837238 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ggchallengejoao.example
+
+[0m20:11:01.840754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fefb0d0>]}
+[0m20:11:01.849248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd4ecd0>]}
+[0m20:11:01.849516 [info ] [MainThread]: Found 8 models, 6 tests, 0 snapshots, 0 analyses, 533 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 2 metrics
+[0m20:11:01.849727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd4ebb0>]}
+[0m20:11:01.850927 [info ] [MainThread]: 
+[0m20:11:01.851413 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m20:11:01.852063 [debug] [ThreadPool]: Acquiring new bigquery connection "list_dynamic-point-367801"
+[0m20:11:01.852213 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:11:03.486882 [debug] [ThreadPool]: Acquiring new bigquery connection "list_dynamic-point-367801_getgroundjoao"
+[0m20:11:03.487469 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:03.926069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd4e910>]}
+[0m20:11:03.927616 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:11:03.928145 [info ] [MainThread]: 
+[0m20:11:03.936704 [debug] [Thread-1  ]: Began running node model.ggchallengejoao.stg_partners
+[0m20:11:03.936868 [debug] [Thread-2  ]: Began running node model.ggchallengejoao.stg_referrals
+[0m20:11:03.937007 [debug] [Thread-3  ]: Began running node model.metrics.dbt_metrics_default_calendar
+[0m20:11:03.937329 [info ] [Thread-1  ]: 1 of 8 START sql view model getgroundjoao.stg_partners ......................... [RUN]
+[0m20:11:03.937553 [info ] [Thread-2  ]: 2 of 8 START sql view model getgroundjoao.stg_referrals ........................ [RUN]
+[0m20:11:03.937780 [info ] [Thread-3  ]: 3 of 8 START sql table model getgroundjoao.dbt_metrics_default_calendar ........ [RUN]
+[0m20:11:03.939334 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.ggchallengejoao.stg_partners"
+[0m20:11:03.940419 [debug] [Thread-2  ]: Acquiring new bigquery connection "model.ggchallengejoao.stg_referrals"
+[0m20:11:03.941260 [debug] [Thread-3  ]: Acquiring new bigquery connection "model.metrics.dbt_metrics_default_calendar"
+[0m20:11:03.941467 [debug] [Thread-1  ]: Began compiling node model.ggchallengejoao.stg_partners
+[0m20:11:03.941641 [debug] [Thread-2  ]: Began compiling node model.ggchallengejoao.stg_referrals
+[0m20:11:03.941797 [debug] [Thread-3  ]: Began compiling node model.metrics.dbt_metrics_default_calendar
+[0m20:11:03.942038 [debug] [Thread-1  ]: Compiling model.ggchallengejoao.stg_partners
+[0m20:11:03.942195 [debug] [Thread-2  ]: Compiling model.ggchallengejoao.stg_referrals
+[0m20:11:03.942342 [debug] [Thread-3  ]: Compiling model.metrics.dbt_metrics_default_calendar
+[0m20:11:03.950355 [debug] [Thread-1  ]: Writing injected SQL for node "model.ggchallengejoao.stg_partners"
+[0m20:11:03.955073 [debug] [Thread-2  ]: Writing injected SQL for node "model.ggchallengejoao.stg_referrals"
+[0m20:11:03.981136 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m20:11:03.981532 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:11:03.981863 [debug] [Thread-2  ]: finished collecting timing info
+[0m20:11:03.982095 [debug] [Thread-3  ]: On model.metrics.dbt_metrics_default_calendar: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.metrics.dbt_metrics_default_calendar"} */
+
+
+        select 
+
+    datetime_diff(
+        cast(cast('2030-01-01' as date) as datetime),
+        cast(cast('1990-01-01' as date) as datetime),
+        day
+    )
+
+  
+[0m20:11:03.982284 [debug] [Thread-1  ]: Began executing node model.ggchallengejoao.stg_partners
+[0m20:11:03.982448 [debug] [Thread-2  ]: Began executing node model.ggchallengejoao.stg_referrals
+[0m20:11:04.006943 [debug] [Thread-2  ]: Writing runtime sql for node "model.ggchallengejoao.stg_referrals"
+[0m20:11:04.007742 [debug] [Thread-1  ]: Writing runtime sql for node "model.ggchallengejoao.stg_partners"
+[0m20:11:04.008902 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:04.009001 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m20:11:04.009129 [debug] [Thread-1  ]: On model.ggchallengejoao.stg_partners: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.stg_partners"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`stg_partners`
+  OPTIONS()
+  as 
+
+select *
+except
+    (lead_sales_contact, created_at, updated_at),
+    if(
+        lead_sales_contact = '0', 'No contact', lead_sales_contact
+    ) as lead_sales_contact,
+    
+timestamp_micros(cast(created_at/ 1000 as int64))
+ as partner_created_at_timestamp,
+    
+timestamp_micros(cast(updated_at/ 1000 as int64))
+ as partner_updated_at_timestamp
+from `dynamic-point-367801`.`getgroundjoao`.`partners`;
+
+
+[0m20:11:04.009253 [debug] [Thread-2  ]: On model.ggchallengejoao.stg_referrals: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.stg_referrals"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`stg_referrals`
+  OPTIONS()
+  as 
+
+select *
+except
+    (created_at, updated_at),
+    
+timestamp_micros(cast(created_at/ 1000 as int64))
+ as referral_created_at_timestamp,
+    
+timestamp_micros(cast(updated_at/ 1000 as int64))
+ as referral_updated_at_timestamp
+from `dynamic-point-367801`.`getgroundjoao`.`referrals`;
+
+
+[0m20:11:05.173815 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:d5181bdc-acce-462e-aa7d-e786ae9c2589:EU&page=queryresults
+[0m20:11:05.197167 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:11:05.198018 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128022df0>]}
+[0m20:11:05.198490 [info ] [Thread-1  ]: 1 of 8 OK created sql view model getgroundjoao.stg_partners .................... [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m20:11:05.199039 [debug] [Thread-1  ]: Finished running node model.ggchallengejoao.stg_partners
+[0m20:11:05.421894 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:ea166eb9-7e2c-42f4-b6aa-c16cbd78008a:EU&page=queryresults
+[0m20:11:05.424168 [debug] [Thread-2  ]: finished collecting timing info
+[0m20:11:05.425178 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128022fd0>]}
+[0m20:11:05.425685 [info ] [Thread-2  ]: 2 of 8 OK created sql view model getgroundjoao.stg_referrals ................... [[32mCREATE VIEW (0 processed)[0m in 1.49s]
+[0m20:11:05.426279 [debug] [Thread-2  ]: Finished running node model.ggchallengejoao.stg_referrals
+[0m20:11:05.427133 [debug] [Thread-4  ]: Began running node model.ggchallengejoao.mart_referrals
+[0m20:11:05.427569 [info ] [Thread-4  ]: 4 of 8 START sql table model getgroundjoao.mart_referrals ...................... [RUN]
+[0m20:11:05.428484 [debug] [Thread-4  ]: Acquiring new bigquery connection "model.ggchallengejoao.mart_referrals"
+[0m20:11:05.428774 [debug] [Thread-4  ]: Began compiling node model.ggchallengejoao.mart_referrals
+[0m20:11:05.428987 [debug] [Thread-4  ]: Compiling model.ggchallengejoao.mart_referrals
+[0m20:11:05.437025 [debug] [Thread-4  ]: Writing injected SQL for node "model.ggchallengejoao.mart_referrals"
+[0m20:11:05.440674 [debug] [Thread-4  ]: finished collecting timing info
+[0m20:11:05.441256 [debug] [Thread-4  ]: Began executing node model.ggchallengejoao.mart_referrals
+[0m20:11:05.460647 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m20:11:05.886521 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:1bed50f8-06f1-44a2-979b-5683a8acafa4:EU&page=queryresults
+[0m20:11:05.913714 [debug] [Thread-3  ]: Writing injected SQL for node "model.metrics.dbt_metrics_default_calendar"
+[0m20:11:05.915871 [debug] [Thread-3  ]: finished collecting timing info
+[0m20:11:05.916108 [debug] [Thread-3  ]: Began executing node model.metrics.dbt_metrics_default_calendar
+[0m20:11:05.943832 [debug] [Thread-4  ]: Writing runtime sql for node "model.ggchallengejoao.mart_referrals"
+[0m20:11:05.944461 [debug] [Thread-4  ]: On model.ggchallengejoao.mart_referrals: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.mart_referrals"} */
+
+  
+    
+
+    create or replace table `dynamic-point-367801`.`getgroundjoao`.`mart_referrals`
+    
+    
+    OPTIONS()
+    as (
+      
+
+select
+    r.id as referral_id,
+    r.company_id as referral_company,
+    r.partner_id as referral_partner,
+    r.status as referral_status,
+    r.is_outbound as referral_outbound,
+    r.referral_created_at_timestamp as referral_record_date,
+    r.referral_updated_at_timestamp as referral_updated,
+    nullif(
+        timestamp_diff(
+            referral_updated_at_timestamp, referral_created_at_timestamp, day
+        ),
+        0
+    ) as referral_days_from_creation,
+    p.partner_type as referral_partner_type,
+    case
+        when p.lead_sales_contact = '0' then 'No contact' else p.lead_sales_contact
+    end as referral_lead_sales_contact,
+    coalesce(d.country, 'No country') as referral_country
+from `dynamic-point-367801`.`getgroundjoao`.`stg_referrals` r
+left join `dynamic-point-367801`.`getgroundjoao`.`stg_partners` p on r.partner_id = p.id
+left join `dynamic-point-367801`.`getgroundjoao`.`sales_people` d on p.lead_sales_contact = d.name
+    );
+  
+[0m20:11:06.272686 [debug] [Thread-3  ]: Writing runtime sql for node "model.metrics.dbt_metrics_default_calendar"
+[0m20:11:06.273620 [debug] [Thread-3  ]: On model.metrics.dbt_metrics_default_calendar: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.metrics.dbt_metrics_default_calendar"} */
+
+  
+    
+
+    create or replace table `dynamic-point-367801`.`getgroundjoao`.`dbt_metrics_default_calendar`
+    
+    
+    OPTIONS()
+    as (
+      
+
+with days as (
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+     + 
+    
+    p11.generated_number * power(2, 11)
+     + 
+    
+    p12.generated_number * power(2, 12)
+     + 
+    
+    p13.generated_number * power(2, 13)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+     cross join 
+    
+    p as p11
+     cross join 
+    
+    p as p12
+     cross join 
+    
+    p as p13
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 14610
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+        datetime_add(
+            cast( cast('1990-01-01' as date) as datetime),
+        interval row_number() over (order by 1) - 1 day
+        )
+
+
+    ) as date_day
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_day <= cast('2030-01-01' as date)
+
+)
+
+select * from filtered
+
+
+),
+
+final as (
+    select 
+        cast(date_day as date) as date_day,
+        cast(timestamp_trunc(
+        cast(date_day as timestamp),
+        week
+    ) as date) as date_week,
+        cast(timestamp_trunc(
+        cast(date_day as timestamp),
+        month
+    ) as date) as date_month,
+        cast(timestamp_trunc(
+        cast(date_day as timestamp),
+        quarter
+    ) as date) as date_quarter,
+        cast(timestamp_trunc(
+        cast(date_day as timestamp),
+        year
+    ) as date) as date_year
+    from days
+)
+
+select * from final
+    );
+  
+[0m20:11:08.866088 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:2a3f49da-be4b-4d0f-91ff-b5fdfa3e0ef9:EU&page=queryresults
+[0m20:11:08.868262 [debug] [Thread-4  ]: finished collecting timing info
+[0m20:11:08.869161 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1281acc10>]}
+[0m20:11:08.869676 [info ] [Thread-4  ]: 4 of 8 OK created sql table model getgroundjoao.mart_referrals ................. [[32mCREATE TABLE (1.5k rows, 96.3 KB processed)[0m in 3.44s]
+[0m20:11:08.870275 [debug] [Thread-4  ]: Finished running node model.ggchallengejoao.mart_referrals
+[0m20:11:08.870815 [debug] [Thread-2  ]: Began running node model.ggchallengejoao.sql_avg_days_status_change
+[0m20:11:08.871030 [debug] [Thread-1  ]: Began running node model.ggchallengejoao.sql_outbound_per_country
+[0m20:11:08.871242 [debug] [Thread-4  ]: Began running node model.ggchallengejoao.sql_total_referrals
+[0m20:11:08.871630 [info ] [Thread-2  ]: 5 of 8 START sql view model getgroundjoao.sql_avg_days_status_change ........... [RUN]
+[0m20:11:08.871956 [info ] [Thread-1  ]: 6 of 8 START sql view model getgroundjoao.sql_outbound_per_country ............. [RUN]
+[0m20:11:08.872297 [info ] [Thread-4  ]: 7 of 8 START sql view model getgroundjoao.sql_total_referrals .................. [RUN]
+[0m20:11:08.873578 [debug] [Thread-2  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_avg_days_status_change"
+[0m20:11:08.874660 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_outbound_per_country"
+[0m20:11:08.875681 [debug] [Thread-4  ]: Acquiring new bigquery connection "model.ggchallengejoao.sql_total_referrals"
+[0m20:11:08.876083 [debug] [Thread-2  ]: Began compiling node model.ggchallengejoao.sql_avg_days_status_change
+[0m20:11:08.876436 [debug] [Thread-1  ]: Began compiling node model.ggchallengejoao.sql_outbound_per_country
+[0m20:11:08.876639 [debug] [Thread-4  ]: Began compiling node model.ggchallengejoao.sql_total_referrals
+[0m20:11:08.876859 [debug] [Thread-2  ]: Compiling model.ggchallengejoao.sql_avg_days_status_change
+[0m20:11:08.877051 [debug] [Thread-1  ]: Compiling model.ggchallengejoao.sql_outbound_per_country
+[0m20:11:08.877253 [debug] [Thread-4  ]: Compiling model.ggchallengejoao.sql_total_referrals
+[0m20:11:08.883930 [debug] [Thread-2  ]: Writing injected SQL for node "model.ggchallengejoao.sql_avg_days_status_change"
+[0m20:11:08.890813 [debug] [Thread-1  ]: Writing injected SQL for node "model.ggchallengejoao.sql_outbound_per_country"
+[0m20:11:08.897262 [debug] [Thread-4  ]: Writing injected SQL for node "model.ggchallengejoao.sql_total_referrals"
+[0m20:11:08.898956 [debug] [Thread-4  ]: finished collecting timing info
+[0m20:11:08.899453 [debug] [Thread-4  ]: Began executing node model.ggchallengejoao.sql_total_referrals
+[0m20:11:08.899665 [debug] [Thread-2  ]: finished collecting timing info
+[0m20:11:08.899950 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:11:08.904984 [debug] [Thread-4  ]: Writing runtime sql for node "model.ggchallengejoao.sql_total_referrals"
+[0m20:11:08.905410 [debug] [Thread-2  ]: Began executing node model.ggchallengejoao.sql_avg_days_status_change
+[0m20:11:08.905680 [debug] [Thread-1  ]: Began executing node model.ggchallengejoao.sql_outbound_per_country
+[0m20:11:08.910239 [debug] [Thread-2  ]: Writing runtime sql for node "model.ggchallengejoao.sql_avg_days_status_change"
+[0m20:11:08.915666 [debug] [Thread-1  ]: Writing runtime sql for node "model.ggchallengejoao.sql_outbound_per_country"
+[0m20:11:08.915902 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m20:11:08.916375 [debug] [Thread-4  ]: On model.ggchallengejoao.sql_total_referrals: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.sql_total_referrals"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`sql_total_referrals`
+  OPTIONS()
+  as 
+
+with
+    calendar as (
+        select *
+        from
+            unnest(
+                generate_date_array('2020-01-01', '2021-12-01', interval 1 month)
+            ) as record_date
+    ),
+
+    referrals as (
+        select
+            datetime_trunc(
+                referral_updated, month
+            ) as mart_referrals_referral_updated_month,
+            count(distinct referral_id) as mart_referrals_referral_total_count
+        from `dynamic-point-367801`.`getgroundjoao`.`mart_referrals`
+
+        where ( ( (referral_status) in ('successful')))
+        group by 1
+    )
+
+
+select
+    c.record_date,
+    r.mart_referrals_referral_total_count,
+    lag(mart_referrals_referral_total_count) over (
+        order by mart_referrals_referral_updated_month asc
+    ) as mart_referrals_referral_total_count_last_month
+from calendar c
+left join
+    referrals r on cast(c.record_date as datetime) = cast(
+        r.mart_referrals_referral_updated_month as datetime
+    )
+order by c.record_date asc;
+
+
+[0m20:11:08.917547 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:08.917708 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m20:11:08.918358 [debug] [Thread-1  ]: On model.ggchallengejoao.sql_outbound_per_country: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.sql_outbound_per_country"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`sql_outbound_per_country`
+  OPTIONS()
+  as 
+
+select
+    referral_country as mart_referrals_referral_country,
+    count(distinct referral_id) as mart_referrals_referral_total_count,
+    avg(referral_days_from_creation) as mart_referrals_referral_avg_days_from_creation
+from `dynamic-point-367801`.`getgroundjoao`.`mart_referrals`
+where ( ( (referral_status) in ('successful')) and ( (referral_outbound) in (0)))
+group by 1
+order by count(distinct referral_id) desc;
+
+
+[0m20:11:08.918594 [debug] [Thread-2  ]: On model.ggchallengejoao.sql_avg_days_status_change: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.sql_avg_days_status_change"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`sql_avg_days_status_change`
+  OPTIONS()
+  as 
+
+
+with
+    calendar as (
+        select *
+        from
+            unnest(
+                generate_date_array('2020-01-01', '2021-12-01', interval 1 month)
+            ) as record_date
+    ),
+
+    referrals as (
+        select
+            datetime_trunc(
+                referral_updated, month
+            ) as mart_referrals_referral_updated_month,
+            avg(referral_days_from_creation) as avg_days_to_success
+        from `dynamic-point-367801`.`getgroundjoao`.`mart_referrals`
+        where ( ( (referral_status) in ('successful')))
+        group by 1
+    )
+
+
+select c.record_date, r.avg_days_to_success
+from calendar c
+left join
+    referrals r on cast(c.record_date as datetime) = cast(
+        r.mart_referrals_referral_updated_month as datetime
+    );
+
+
+[0m20:11:09.739133 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:7ac78ab2-f70c-4ff5-9754-1c11c7b750bd:EU&page=queryresults
+[0m20:11:09.740488 [debug] [Thread-3  ]: finished collecting timing info
+[0m20:11:09.740972 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1281defa0>]}
+[0m20:11:09.741240 [info ] [Thread-3  ]: 3 of 8 OK created sql table model getgroundjoao.dbt_metrics_default_calendar ... [[32mCREATE TABLE (14.6k rows, 0 processed)[0m in 5.80s]
+[0m20:11:09.741551 [debug] [Thread-3  ]: Finished running node model.metrics.dbt_metrics_default_calendar
+[0m20:11:09.741832 [debug] [Thread-3  ]: Began running node model.ggchallengejoao.metrics_total_referrals
+[0m20:11:09.741978 [info ] [Thread-3  ]: 8 of 8 START sql view model getgroundjoao.metrics_total_referrals .............. [RUN]
+[0m20:11:09.742381 [debug] [Thread-3  ]: Acquiring new bigquery connection "model.ggchallengejoao.metrics_total_referrals"
+[0m20:11:09.742491 [debug] [Thread-3  ]: Began compiling node model.ggchallengejoao.metrics_total_referrals
+[0m20:11:09.742653 [debug] [Thread-3  ]: Compiling model.ggchallengejoao.metrics_total_referrals
+[0m20:11:09.856682 [debug] [Thread-3  ]: Writing injected SQL for node "model.ggchallengejoao.metrics_total_referrals"
+[0m20:11:09.858248 [debug] [Thread-3  ]: finished collecting timing info
+[0m20:11:09.858357 [debug] [Thread-3  ]: Began executing node model.ggchallengejoao.metrics_total_referrals
+[0m20:11:09.860155 [debug] [Thread-3  ]: Writing runtime sql for node "model.ggchallengejoao.metrics_total_referrals"
+[0m20:11:09.860393 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m20:11:09.860510 [debug] [Thread-3  ]: On model.ggchallengejoao.metrics_total_referrals: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "ggchallengejoao", "target_name": "dev", "node_id": "model.ggchallengejoao.metrics_total_referrals"} */
+
+
+  create or replace view `dynamic-point-367801`.`getgroundjoao`.`metrics_total_referrals`
+  OPTIONS()
+  as 
+
+
+select *
+from
+    -- depends on: `dynamic-point-367801`.`getgroundjoao`.`dbt_metrics_default_calendar`
+    
+
+(
+
+with calendar as (
+
+    select 
+        * 
+    from `dynamic-point-367801`.`getgroundjoao`.`dbt_metrics_default_calendar`
+     
+)
+
+
+
+, referral_total_count__aggregate as (
+    select
+        date_month,
+        count(distinct property_to_aggregate) as referral_total_count,
+        logical_or(metric_date_day is not null) as has_data
+        
+
+    from (
+
+    
+        select 
+        
+            cast(base_model.referral_record_date as date) as metric_date_day, -- timestamp field
+            calendar_table.date_month as date_month,
+            calendar_table.date_day as window_filter_date,
+
+            
+                (referral_id) as property_to_aggregate
+
+        from `dynamic-point-367801`.`getgroundjoao`.`mart_referrals` base_model 
+        
+
+    left join `dynamic-point-367801`.`getgroundjoao`.`dbt_metrics_default_calendar` calendar_table
+    
+        on cast(base_model.referral_record_date as date) = calendar_table.date_day
+    
+
+ 
+
+        where 1=1
+        
+        
+    ) as base_query
+
+    where 1=1
+
+    
+
+    
+        group by
+        1
+
+
+
+)
+
+, referral_total_count__spine_time as (
+
+    select
+        calendar.date_month
+
+    from calendar
+    
+        group by
+        1
+
+
+
+)
+
+, referral_total_count__final as (
+    
+    select
+        
+        parent_metric_cte.date_month,
+        coalesce(referral_total_count, 0) as referral_total_count
+
+    from referral_total_count__spine_time as parent_metric_cte
+    left outer join referral_total_count__aggregate
+        using (
+            date_month
+        )
+
+        where (
+            parent_metric_cte.date_month >= (
+                select 
+                    min(case when has_data then date_month end) 
+                from referral_total_count__aggregate
+            )
+            and parent_metric_cte.date_month <= (
+                select 
+                    max(case when has_data then date_month end) 
+                from referral_total_count__aggregate
+            )
+             
+        )      
+         
+    )
+
+
+
+, secondary_calculations as (
+
+    select 
+        *
+
+
+    from referral_total_count__final
+)
+
+
+
+
+
+    select * from referral_total_count__final
+        order by
+        1 desc
+
+
+
+) metric_subq;
+
+
+[0m20:11:10.130200 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:c5de579c-0492-4954-b8a4-c29d3cd7c14d:EU&page=queryresults
+[0m20:11:10.131339 [debug] [Thread-4  ]: finished collecting timing info
+[0m20:11:10.131839 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128134670>]}
+[0m20:11:10.132124 [info ] [Thread-4  ]: 7 of 8 OK created sql view model getgroundjoao.sql_total_referrals ............. [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m20:11:10.132466 [debug] [Thread-4  ]: Finished running node model.ggchallengejoao.sql_total_referrals
+[0m20:11:10.211858 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:f5b36d4c-e994-4443-b065-1e8b8e70dc9d:EU&page=queryresults
+[0m20:11:10.214205 [debug] [Thread-1  ]: finished collecting timing info
+[0m20:11:10.215183 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1281edaf0>]}
+[0m20:11:10.215671 [info ] [Thread-1  ]: 6 of 8 OK created sql view model getgroundjoao.sql_outbound_per_country ........ [[32mCREATE VIEW (0 processed)[0m in 1.34s]
+[0m20:11:10.216226 [debug] [Thread-1  ]: Finished running node model.ggchallengejoao.sql_outbound_per_country
+[0m20:11:10.293009 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:305be805-da14-427c-b8c2-762397193c49:EU&page=queryresults
+[0m20:11:10.295392 [debug] [Thread-2  ]: finished collecting timing info
+[0m20:11:10.296502 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1281ed370>]}
+[0m20:11:10.297074 [info ] [Thread-2  ]: 5 of 8 OK created sql view model getgroundjoao.sql_avg_days_status_change ...... [[32mCREATE VIEW (0 processed)[0m in 1.42s]
+[0m20:11:10.297744 [debug] [Thread-2  ]: Finished running node model.ggchallengejoao.sql_avg_days_status_change
+[0m20:11:10.977646 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dynamic-point-367801&j=bq:9df3d92f-1fd6-4b68-94f8-92d3ea727536:EU&page=queryresults
+[0m20:11:10.980095 [debug] [Thread-3  ]: finished collecting timing info
+[0m20:11:10.981104 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dd3ee53-180c-424a-869b-440ba4526497', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1284449a0>]}
+[0m20:11:10.981664 [info ] [Thread-3  ]: 8 of 8 OK created sql view model getgroundjoao.metrics_total_referrals ......... [[32mCREATE VIEW (0 processed)[0m in 1.24s]
+[0m20:11:10.982322 [debug] [Thread-3  ]: Finished running node model.ggchallengejoao.metrics_total_referrals
+[0m20:11:10.984820 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m20:11:10.985888 [info ] [MainThread]: 
+[0m20:11:10.986280 [info ] [MainThread]: Finished running 6 view models, 2 table models in 0 hours 0 minutes and 9.13 seconds (9.13s).
+[0m20:11:10.986888 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:11:10.987154 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_outbound_per_country' was properly closed.
+[0m20:11:10.987384 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_avg_days_status_change' was properly closed.
+[0m20:11:10.987704 [debug] [MainThread]: Connection 'model.ggchallengejoao.metrics_total_referrals' was properly closed.
+[0m20:11:10.987935 [debug] [MainThread]: Connection 'model.ggchallengejoao.sql_total_referrals' was properly closed.
+[0m20:11:11.012864 [info ] [MainThread]: 
+[0m20:11:11.013350 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:11:11.014182 [info ] [MainThread]: 
+[0m20:11:11.014610 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m20:11:11.015155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fef63a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc38cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc38430>]}
+[0m20:11:11.015539 [debug] [MainThread]: Flushing usage events

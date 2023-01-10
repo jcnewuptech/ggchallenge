@@ -75,8 +75,8 @@ models:
       - name: referral_country
         description: "Country of the sales person"
 
-  - name: metrics_total_referrals
-    description: "Its an example of total referrals metric using dbt metrics"
+  - name: sql_total_referrals
+    description: "Its an example of total referrals metric"
     columns:
       - name: record_date
         description: "Month of the referrals"
@@ -84,6 +84,7 @@ models:
         description: "Total referrals"
       - name: mart_referrals_referral_total_count_last_month
         description: "Total referrals from last month"
+
   - name: sql_avg_days_status_change
     description: "Its an example of a metric that shows the average days that took to that referrals changes to success status"
     columns:
@@ -101,6 +102,14 @@ models:
         description: "Total count of referral"
       - name: mart_referrals_referral_avg_days_from_creation
         description: "Average days that took to that referrals changes to success status"
+
+  - name: metrics_total_referrals
+    description: "Its an example of total referrals metric using dbt metrics"
+    columns:
+      - name: record_date
+        description: "Month of the referrals"
+      - name: referral_total_count
+        description: "Total referrals"
 
 seeds:
   - name: referrals
